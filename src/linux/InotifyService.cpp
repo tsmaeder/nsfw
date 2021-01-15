@@ -1,4 +1,5 @@
 #include "../../includes/linux/InotifyService.h"
+#include <unistd.h>
 
 InotifyService::InotifyService(std::shared_ptr<EventQueue> queue, std::string path):
   mEventLoop(NULL),
@@ -98,6 +99,7 @@ void InotifyService::createDirectory(int wd, std::string name) {
     return;
   }
 
+  sleep(1);
   mTree->addDirectory(wd, name);
   dispatch(CREATED, wd, name);
 }

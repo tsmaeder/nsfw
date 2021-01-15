@@ -20,10 +20,12 @@
   "engines": {
     "node": ">=10.16.0"
   },
+  "bin": "js/src/nsfw.js",
   "files": [
-    "index.d.ts",
     "js/src",
-    "src",
+    "index.d.ts",
+    "nsfw.js",
+    "lib",
     "includes",
     "binding.gyp"
   ],
